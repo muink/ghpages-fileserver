@@ -1,25 +1,43 @@
 <html>
 <head>
-<style>
-body {
-    padding: 32pt 10%;
-    margin: 0;
-    font-family: monospace;
-}
-table {
-    border-collapse: collapse;
-    width: 80%;
-}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <style>
+    body {
+        padding: 32pt 10%;
+        margin: 0;
+        font-family: monospace;
+    }
+    table {
+        border-collapse: collapse;
+        width: 80%;
+    }
 
-td, th {
-    text-align: left;
-    padding: 8px;
-}
+    td, th {
+        text-align: left;
+        padding: 8px;
+    }
 
-tr:hover {
-    background-color: #efefef;
-}
-</style>
+    tr:hover {
+        background-color: #efefef;
+    }
+    </style>
 </head>
 
+<body>
+
 {{ content }}
+
+<br/>
+<br/>
+<code><i> ghpages fileserver v1.0b
+© Karlheinz Niebuhr, Bryan
+</i></code>
+
+</body>
+
+<script>
+document.getElementById('path').innerHTML = "Index of " + window.location.pathname;
+</script>
+</html>
