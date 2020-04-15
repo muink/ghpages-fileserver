@@ -22,7 +22,7 @@ layout: base
                 class="post-link"
                 href="{{ res.path | prepend: site.baseurl }}"
             > {{ res.path | remove_first: page.url }} </a></td>
-            <td>{{ res.modified_time | date: "%Y-%m-%d" }}</td>
+            <td>{{ res.modified_time }}</td>
         </tr>
         {% endif %}
     {% endfor %}
