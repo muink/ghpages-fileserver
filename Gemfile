@@ -2,5 +2,5 @@
 source "https://mirrors.tuna.tsinghua.edu.cn/rubygems/"
 # source "https://rubygems.org"
 
-# gem 'github-pages', group: :jekyll_plugins
+gem 'github-pages', group: :jekyll_plugins
 gem "jekyll-readme-index"
