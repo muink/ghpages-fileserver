@@ -13,15 +13,31 @@ layout: base
         <th>Last modified</th>
     </tr>
 
-    {% for res in site.static_files %}
-        {% if res.path contains page.url %}
+    {%- assign folder = '' -%}
+    {%- for res in site.static_files -%}
+
+        {%- assign checkStart = res.path | split: page.url -%}
+        {%- if checkStart[0] != '' -%}
+            {%- continue -%}
+        {%- endif -%}
+
+        {%- assign target = res.path | remove_first: page.url -%}
+        {%- if target contains '/' -%}
+            {%- assign folder_new = target | split: '/' | first -%}
+            {%- if folder_new == folder -%}
+                {%- continue -%}
+            {%- endif -%}
+
+            {%- assign folder = folder_new -%}
+            {%- assign target = folder | append: '/' -%}
+        {%- endif -%}
+
         <tr>
             <td><a
                 class="post-link"
-                href="{{ res.path | prepend: site.baseurl }}"
-            > {{ res.path | remove_first: page.url }} </a></td>
+                href="{{ target }}"
+            > {{ target }} </a></td>
             <td>{{ res.modified_time }}</td>
         </tr>
-        {% endif %}
-    {% endfor %}
+    {%- endfor -%}
 </table>
