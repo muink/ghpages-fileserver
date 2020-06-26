@@ -48,7 +48,11 @@ Finite Temperature Field Theory, Spring 2020, by Prof. Lian-Yi He @ Tsinghua
 2. Pure QED partition function in covariant gauge, with Faddeev-Popov quantization & mode expansions;
 3. QCD partition function from Feynman diagrams, with tricks to compute Matsubara sums;
 4. Ward identity with hard thermal loop (HTL), decomposition of transverse self-energy using projections, and HTL in QCD;
-5. Correlations of Pauli spinors, using effective formalism & perturbative expansions, with full calculations of Matsubara sums & frequency integral, and results expressed in spectral functions.
+5. Correlations of Pauli spinors, using effective formalism & perturbative expansions, with full calculations of Matsubara sums & frequency integral; results expressed in spectral functions.
+
+## SpinorGR `spinor`
+
+An intuitive introduction of spin structure & spinor in general relativity (GR), with discussions of physical motivations, and a sketch of Witten's proof of the positive energy theorem. Written as the final paper for Differential Geometry, a course in Fall 2019 given by Prof. Hui Ma @ Tsinghua.
 
 ## AlgebraicTopology2020 `algtop`
 
