@@ -1,14 +1,6 @@
----
-layout: article
-title: "[Notes] [hep-th/0106112] [Maldacena] ThermoField Double"
-key: 20200707
-tags:
-    - Math & Phyx / 数学物理
-    - Notes / 学习笔记
-lang: en
----
+# [hep-th/0106112] [Maldacena] ThermoField Double
 
-<!-- @import "../_includes/usermod/mathjax.html" -->
+<!-- @import "_includes/mathjax-macros/mathjax.html" -->
 
 ### References:
 - Maldacena, [hep-th/0106112]
@@ -63,7 +55,7 @@ $$
     = \ket{\Psi(0)}
   $$
 
-  > **Convention:** the double Hilbert space is usually taken to be $\mcal{H}^\ast_L\otimes\mcal{H}_R$, where the left theory is time-reversed _by definition_; note the star “$\ast$” in $\mcal{H}^*_L$.
+  > **Convention:** the double Hilbert space is usually taken to be $\mcal{H}^\ast_L\otimes\mcal{H}_R$, where the left theory is time-reversed *by definition*; note the star “$\ast$” in $\mcal{H}^*_L$.
   >
   > The unstarred Hilbert space $\mcal{H}_L$ corresponds to the Hamiltonian $H_L$, while for the time-reversed $\mcal{H}^*_L$ we have $(-H_L)$. The total Hamiltonian is thus $H = H_R - H_L$.
   >

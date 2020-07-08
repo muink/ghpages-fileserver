@@ -1,0 +1,51 @@
+body {
+  padding: 32pt 10%;
+  margin: 0;
+  font-family: monospace;
+  line-height: 1.25rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:hover {
+  background-color: #efefef;
+}
+
+code {
+  padding: .2em .3em;
+  margin: 0 .15em;
+  background-color: rgba(27,31,35,.05);
+  border-radius: 5px;
+  font-size: 90%;
+}
+
+img {
+  padding: 1rem;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mjx-chtml {
+  font-size: 105% !important;
+}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  padding: .3em 0;
+}

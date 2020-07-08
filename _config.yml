@@ -1,0 +1,6 @@
+timezone: Asia/Shanghai
+plugins:
+  - jekyll-readme-index
+
+readme_index:
+  with_frontmatter: true
