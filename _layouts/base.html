@@ -3,38 +3,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <style>
-    body {
-        padding: 32pt 10%;
-        margin: 0;
-        font-family: monospace;
-    }
-
-    table {
-        border-collapse: collapse;
-        width: 80%;
-    }
-
-    td, th {
-        text-align: left;
-        padding: 8px;
-    }
-
-    tr:hover {
-        background-color: #efefef;
-    }
-
-    code {
-        padding: .2em .3em;
-        margin: 0 .15em;
-        background-color: rgba(27,31,35,.05);
-        border-radius: 5px;
-        font-size: 90%;
-    }
-    </style>
+    <link rel="stylesheet" href="/assets/css/markdown.css" />
+    {%- include mathjax-base.html -%}
 </head>
 
 <body>
+<div class="mathjax_macros" style="display: none;">
+    <script type="math/tex">
+        {%- include mathjax-macros/macros.tex -%}
+    </script>
+    <script type="math/tex">
+        {%- include mathjax-macros/mathjax.tex -%}
+    </script>
+</div>
 
 {{ content }}
 
@@ -45,8 +26,4 @@
 </i></tt>
 
 </body>
-
-<script>
-document.getElementById('path').innerHTML = "Index of " + window.location.pathname;
-</script>
 </html>
