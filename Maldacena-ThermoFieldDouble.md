@@ -77,7 +77,7 @@ $$
   <center>
     $\ket{\Psi} = $ <img
       src="img/TFD-geometry.png"
-      style="width: 20%; vertical-align: middle"
+      style="width: 8rem; vertical-align: middle"
     /> $
       \sim \displaystyle\int_\bullet^\star
           \DD{\phi}\,e^{-S[\phi]}
