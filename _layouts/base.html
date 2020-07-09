@@ -7,17 +7,27 @@
         rel="stylesheet"
         href="{{ '/assets/css/markdown.css' | relative_url }}"
     />
+    <script
+        type="text/javascript"
+        src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script>
+        $(function(){
+            $("#macros_tex").load(
+                "https://cdn.jsdelivr.net/gh/bryango/Templates@master/LaTeX/basics/macros.tex"
+            );
+            $("#mathjax_tex").load(
+                "https://cdn.jsdelivr.net/gh/bryango/Templates@master/LaTeX/basics/macros.tex"
+            );
+        });
+    </script>
     {%- include mathjax-base.html -%}
 </head>
 
 <body>
 <div class="mathjax_macros" style="display: none;">
-    <script type="math/tex">
-        {%- include mathjax-macros/macros.tex -%}
-    </script>
-    <script type="math/tex">
-        {%- include mathjax-macros/mathjax.tex -%}
-    </script>
+    <script type="math/tex" id="macros_tex"></script>
+    <script type="math/tex" id="mathjax_tex"></script>
 </div>
 
 {{ content }}
