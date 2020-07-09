@@ -8,7 +8,9 @@ layout: base
 
 {%- include license.html -%}
 
-<h2 id="path"></h2>
+<br/>
+
+<h2 id="path">Index of {{ page.url }}</h2>
 
 <table style="width:100%">
     <tr>
@@ -79,8 +81,3 @@ layout: base
     </tr>
 {%- endfor -%}
 </table>
-
-<script>
-    document.getElementById('path').innerHTML
-    = "Index of " + window.location.pathname;
-</script>

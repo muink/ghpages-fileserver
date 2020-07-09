@@ -48,3 +48,7 @@ html body h5,
 html body h6 {
   padding: .3em 0;
 }
+
+.license img {
+  width: 160px;
+}
