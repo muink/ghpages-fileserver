@@ -1,0 +1,82 @@
+---
+layout: base
+---
+
+{{ content }}
+
+<br/>
+
+<h2 id="path">Index of {{ page.url }}</h2>
+
+<table style="width:100%">
+
+<!-- first we list the pages under ./ -->
+
+    <tr>
+        <td>./</a></td>
+        <td></td>
+    </tr>
+
+{%- for res in site.pages -%}
+
+    {%- assign checkStart = res.url | split: page.url -%}
+    {%- if checkStart[0] != '' -%}
+        {%- continue -%}
+    {%- endif -%}
+
+    {%- assign target = res.url | remove_first: page.url -%}
+    {%- if target contains '/' -%}
+        {%- continue -%}
+    {%- endif -%}
+
+    <tr>
+        <td>&emsp; >
+            <a class="post-link" href="{{ target }}" >
+                {{ res.title | remove_first: folder  }}
+            </a>
+        </td>
+        <td>{{ res.modified_time }}</td>
+    </tr>
+{%- endfor -%}
+
+<!-- then we list the pages under sub path */ -->
+
+{%- for res in site.pages -%}
+
+<!-- ignore /assets/ -->
+
+    {%- assign checkStart = res.url | split: '/assets/' -%}
+    {%- if checkStart[0] == '' -%}
+        {%- continue -%}
+    {%- endif -%}
+
+    {%- assign checkStart = res.url | split: page.url -%}
+    {%- if checkStart[0] != '' -%}
+        {%- continue -%}
+    {%- endif -%}
+
+    {%- assign target = res.url | remove_first: page.url -%}
+    {%- if target contains '/' -%}
+        {%- assign folder_new = target | split: '/' | first -%}
+    {%- else -%}
+        {%- continue -%}
+    {%- endif -%}
+
+    {%- if folder_new != folder -%}
+        {%- assign folder = folder_new -%}
+        <tr>
+            <td>{{ folder | append: '/' }}</a></td>
+            <td></td>
+        </tr>
+    {%- endif -%}
+
+    <tr>
+        <td>&emsp; >
+            <a class="post-link" href="{{ target }}" >
+                {{ target | remove_first: folder | remove_first: '/' }}
+            </a>
+        </td>
+        <td>{{ res.modified_time }}</td>
+    </tr>
+{%- endfor -%}
+</table>
