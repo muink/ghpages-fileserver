@@ -18,6 +18,7 @@ jobs:
     - name: Clone, merge and push to gh-pages
       run: |
         git clone "https://bryango:${{ secrets.PUSH_SECRET }}@github.com/bryango/resources.git"
+        cd resources
         git config --local user.email "workflow@github.com"
         git config --local user.name "Workflow - master"
         git checkout gh-pages
