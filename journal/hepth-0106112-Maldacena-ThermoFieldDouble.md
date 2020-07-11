@@ -1,6 +1,6 @@
 # [hep-th/0106112] [Maldacena] ThermoField Double
 
-<!-- @import "assets/mathjax.html" -->
+<!-- @import "/assets/mathjax.html" -->
 
 ### References:
 - Maldacena, [hep-th/0106112]
